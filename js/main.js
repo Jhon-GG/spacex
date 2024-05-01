@@ -11,3 +11,4 @@ let [Rockets1, Rockets2, Rockets3] = dataRockets;
 
 information__2.append(...progressRocketWeight(Totales.kg_max, [Rockets3]))
 information__2.append(...progressPayloadWeights(Totales.payload_weights, Rockets3))
+

@@ -7,7 +7,7 @@ export const getAllRockets = async ()=>{
         listMasa.push(val.mass.kg);
         listPayloadWeights.push(...val.payload_weights)
     });
-
+    
     listMasa.sort((a,b) => b - a)
     listPayloadWeights.sort((a,b) => b.kg - a.kg)
     data.push({kg_max: listMasa.shift(), payload_weights: listPayloadWeights.shift().kg});
