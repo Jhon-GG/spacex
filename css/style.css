@@ -9,7 +9,7 @@
 
 body {
     background-image: url("../storage/img/back.gif");
-}
+} 
 *::-webkit-scrollbar {
     height: 12px;
     width: 10px;
@@ -33,7 +33,7 @@ body {
 .header__title {
     /* background: red; */
     color: var(--color--five);
-    height: 10vh;
+    height: 6vh;
     font-size: 2.3rem;
     display: flex;
     justify-content: center;
@@ -239,6 +239,7 @@ body {
     text-align: center;
     margin: 0 10px;
 
+
 }
 
 .section__image>.carousel__item img {
@@ -313,16 +314,15 @@ body {
 
 
 .footer {
-    border: 1px solid green;
-    background: coral;
-    /* grid-area: section__footer; */
+    border: 1px solid rgb(28, 33, 82);
+    background: rgba(28, 33, 82, 0.267);
+    grid-area: section__footer;
+    height: 80%;
+    margin-top: 34px;
+    border-radius: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 100px;
-    /* display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-areas: ". footer__menu ."; */
 }
 
 .footer ul {
@@ -331,6 +331,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 75px;
+    margin-top: -30px;
 }
 
 .footer ul li {
@@ -342,14 +344,20 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    gap: 10px;
-    color: #fff;    
+    color: #fff;   
+    justify-content: center;
+    align-items: center;
 }
 
 .footer img{
     display: flex;
-    width: 35%;
-    height: 20%;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 5%;
+    margin-left: 0.5%;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer a:hover{
@@ -472,17 +480,18 @@ progress[value]::-moz-progress-bar {
     color: #fff;
     cursor: pointer;
     box-shadow: 2px 2px 3px #000000b4;
-  }
+    width: 100%;
+}
   
   .container {
     position: relative;
-    width: 40%;
     padding: 3px;
     background: linear-gradient(90deg, #03a9f4, #031bf4);
     border-radius: 0.9em;
     transition: all 0.4s ease;
     margin-left: 30%;
-    margin-bottom: 20%;
+    margin-top: -10%;
+    margin-bottom: 10%;
   }
   
   .container::before {
@@ -503,4 +512,3 @@ progress[value]::-moz-progress-bar {
   .container:active::before {
     filter: blur(0.2em);
   }
-  
