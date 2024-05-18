@@ -470,3 +470,111 @@ progress[value]::-moz-progress-bar {
     border-radius: 10em;
     background: var(--color);
 }
+
+.small-image {
+    width: 200px; 
+    height: 250px; 
+    position:absolute;
+    margin-top: 15px; 
+    margin-left: 450px;
+}
+
+.small-hola {
+    width: 200px; 
+    height: 300px; 
+    position:absolute;
+    margin-top: 30px; 
+    margin-left: 30px;
+}
+
+.small-sopa {
+    width: 200px; 
+    height: 300px; 
+    position:absolute;
+    margin-top: 30px; 
+    margin-left: 860px;
+}
+
+#rocket img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+#capsules img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #company img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+
+  #cores img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #crew img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #dragons img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #history img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #landpads img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #launches img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #launchpads img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #payloads img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #roadster img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+  #ships img {
+    width: 30px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción de aspecto */
+  }
+
+
+
+
+
+
+  ul {
+    display: flex; /* Utiliza Flexbox para alinear los elementos */
+    gap: 10px; /* Establece el espacio deseado entre los elementos */
+  }
+  li {
+    margin-bottom: 10px; /* Establece el margen inferior deseado entre los elementos */
+  }
+  
+  .select {
+    display: inline-block; /* Asegura que los elementos se muestren en línea */
+
+  }
