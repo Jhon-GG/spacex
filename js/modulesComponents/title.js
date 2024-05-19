@@ -70,7 +70,7 @@ export const namePayload= async(name)=>{
     header__title.textContent = name;
 }
 
-export const nameRoadster= async(name)=>{
+export const nameRoadsters= async(name)=>{
     let header__title = document.querySelector("#header__title");
     header__title.innerHTML = "";
     header__title.textContent = name;

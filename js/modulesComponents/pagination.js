@@ -15,7 +15,7 @@ import {
     nameLaunchpad,
     nameHistory,
     namePayload,
-    nameRoadster
+    nameRoadsters
 } from "./title.js";
 import { 
     informationRockets,
@@ -49,8 +49,14 @@ import {
 } from "../modules/capsules.js";
 
 import {
-    getCompany
+    getCompany,
+    getCompanyById
 } from "../modules/company.js"
+
+import {
+    getIdRoadster,
+    getRoadster
+} from "../modules/roadster.js"
 
 export const load = async()=>{
     let header__title = document.querySelector("#header__title");
@@ -270,5 +276,14 @@ export const paginationCompany = async() => {
     await clear()
 
     await nameCompany(data.name);
+
+}
+
+
+export const paginationRoadster = async (e) => {
+    let data = await getRoadster()
+    await clear()
+
+    await nameRoadsters(data.name);
 
 }

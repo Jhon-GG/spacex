@@ -12,7 +12,7 @@ import {
     // paginationLaunchpads,
     // paginationHistory,
     // paginationPayloads,
-    // paginationRoadster
+    paginationRoadster
 } from "./modulesComponents/pagination.js";
 
 
@@ -135,14 +135,14 @@ company.addEventListener("click", async(e)=>{
 //     paginacion.append(await paginationPayloads())
 // })
 
-// let roadster = document.querySelector("#roadster");
-// roadster.addEventListener("click", async (e) => {
-//     await footerSelect(e, roadster);
+let roadster = document.querySelector("#roadster");
+roadster.addEventListener("click", async (e) => {
+    await footerSelect(e, roadster);
 
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = "";
-//     await paginationRoadster(); 
-// });
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = "";
+    await paginationRoadster(); 
+});
 
 
 rocket.click();
