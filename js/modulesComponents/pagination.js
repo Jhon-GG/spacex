@@ -305,7 +305,7 @@ const getCapsulesId = async (e) => {
 
 
 
-export const paginationCapsules = async(page=1, limit=4)=>{  
+export const paginationCapsules = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllCapsules(page, limit)
 
@@ -335,7 +335,7 @@ export const paginationCapsules = async(page=1, limit=4)=>{
     end.addEventListener("click", getCapsulesId)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     // <div class="buttom__paginacion">
     //     <a href="#">&laquo;</a> 
@@ -415,7 +415,7 @@ const getAllCoreId = async (e) => {
 
 
 
-export const paginationCores = async(page=1, limit=4)=>{  
+export const paginationCores = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllCores(page, limit)
 
@@ -445,7 +445,7 @@ export const paginationCores = async(page=1, limit=4)=>{
     end.addEventListener("click", getAllCoreId)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
 }
@@ -490,7 +490,7 @@ const getAllIDCrew = async (e) => {
 
 
 
-export const paginationCrew = async(page=1, limit=4)=>{  
+export const paginationCrew = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllCrew(page, limit)
 
@@ -520,7 +520,7 @@ export const paginationCrew = async(page=1, limit=4)=>{
     end.addEventListener("click", getAllIDCrew)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
 }
@@ -559,7 +559,7 @@ const getAllIdDragon = async (e) => {
 
 
 
-export const paginationDragons = async(page=1, limit=4)=>{  
+export const paginationDragons = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllDragons(page, limit)
 
@@ -589,7 +589,7 @@ export const paginationDragons = async(page=1, limit=4)=>{
     end.addEventListener("click", getAllIdDragon)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
 }
@@ -630,7 +630,7 @@ const getAllIDHistory = async (e) => {
 
 
 
-export const paginationHistory = async(page=1, limit=4)=>{  
+export const paginationHistory = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllHistory(page, limit)
 
@@ -660,7 +660,7 @@ export const paginationHistory = async(page=1, limit=4)=>{
     end.addEventListener("click", getAllIDHistory)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
 }
@@ -703,7 +703,7 @@ const getAllIdLandpads = async (e) => {
 
 
 
-export const paginationLandpads = async(page=1, limit=4)=>{  
+export const paginationLandpads = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLandpads(page, limit)
 
@@ -733,7 +733,7 @@ export const paginationLandpads = async(page=1, limit=4)=>{
     end.addEventListener("click", getAllIdLandpads)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3,next] = div.children
     a1.click();
     return div;
 }
@@ -848,7 +848,7 @@ const getAllIdLaunchpads = async (e) => {
 
 
 
-export const paginationLaunchpads = async(page=1, limit=4)=>{  
+export const paginationLaunchpads = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLaunchpads(page, limit)
 
@@ -878,7 +878,7 @@ export const paginationLaunchpads = async(page=1, limit=4)=>{
     end.addEventListener("click", getAllIdLaunchpads)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3,next] = div.children
     a1.click();
     return div;
 }
@@ -918,7 +918,7 @@ const getPayloadsId = async (e) => {
 
 
 
-export const paginationPayloads = async(page=1, limit=4)=>{  
+export const paginationPayloads = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllPayloads(page, limit)
 
@@ -948,7 +948,7 @@ export const paginationPayloads = async(page=1, limit=4)=>{
     end.addEventListener("click", getPayloadsId)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3,next] = div.children
     a1.click();
     return div;
 }
