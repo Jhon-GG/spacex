@@ -1,8 +1,20 @@
 import { 
     load,
     paginationCapsules,
-    paginationRockets
+    paginationRockets,
+    // paginationCrew,
+    // paginationLaunches,
+    // paginationCores,
+    // paginationLandpads,
+    // paginationShips,
+    paginationCompany,
+    // paginationDragons,
+    // paginationLaunchpads,
+    // paginationHistory,
+    // paginationPayloads,
+    // paginationRoadster
 } from "./modulesComponents/pagination.js";
+
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();
@@ -33,5 +45,105 @@ capsules.addEventListener("click", async(e)=>{
     paginacion.append(await paginationCapsules())
 })
 
+// //pagina a mostrar primero cuando se carga 
+
+// let Crew = document.querySelector("#Crew")
+// Crew.addEventListener("click", async(e)=>{
+//     await footerSelect(e, Crew)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationCrew())
+// })
+
+
+// let launches = document.querySelector("#launches")
+// launches.addEventListener("click", async(e)=>{
+//     await footerSelect(e, launches)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationLaunches())
+// })
+
+
+// let cores = document.querySelector("#cores")
+// cores.addEventListener("click", async(e)=>{
+//     await footerSelect(e, cores)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationCores())
+// })
+
+
+// let landpads = document.querySelector("#landpads")
+// landpads.addEventListener("click", async(e)=>{
+//     await footerSelect(e, landpads)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationLandpads())
+// })
+
+// let ships = document.querySelector("#ships")
+// ships.addEventListener("click", async(e)=>{
+//     await footerSelect(e, ships)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationShips())
+// })
+
+
+let company = document.querySelector("#company")
+company.addEventListener("click", async(e)=>{
+    await footerSelect(e, company)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationCompany())
+})
+
+
+// let dragons = document.querySelector("#dragons")
+// dragons.addEventListener("click", async(e)=>{
+//     await footerSelect(e, dragons)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationDragons())
+// })
+
+
+// let launchpads = document.querySelector("#launchpads")
+// launchpads.addEventListener("click", async(e)=>{
+//     await footerSelect(e, launchpads)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationLaunchpads())
+// })
+
+
+// let history = document.querySelector("#history")
+// history.addEventListener("click", async(e)=>{
+//     await footerSelect(e, history)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationHistory())
+// })
+
+
+// let payloads = document.querySelector("#payloads")
+// payloads.addEventListener("click", async(e)=>{
+//     await footerSelect(e, payloads)
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = ""
+//     paginacion.append(await paginationPayloads())
+// })
+
+// let roadster = document.querySelector("#roadster");
+// roadster.addEventListener("click", async (e) => {
+//     await footerSelect(e, roadster);
+
+//     let paginacion = document.querySelector("#paginacion");
+//     paginacion.innerHTML = "";
+//     await paginationRoadster(); 
+// });
+
 
 rocket.click();
+

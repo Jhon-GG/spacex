@@ -3,7 +3,19 @@ import {
     getAllRocketsId
 } from "../modules/rockets.js";
 import { 
-    nameRockets 
+    nameRockets,
+    nameCapsul,
+    nameCrew,
+    nameLaunches,
+    nameCore,
+    nameLanpad,
+    nameShip,
+    nameCompany,
+    nameDragon,
+    nameLaunchpad,
+    nameHistory,
+    namePayload,
+    nameRoadster
 } from "./title.js";
 import { 
     informationRockets,
@@ -32,9 +44,13 @@ import {
 } from "../modulesComponents/progressBar.js";
 ///
 import { 
-    getAllCapsules 
+    getAllCapsules,
+    getIdCapsules,
 } from "../modules/capsules.js";
 
+import {
+    getCompany
+} from "../modules/company.js"
 
 export const load = async()=>{
     let header__title = document.querySelector("#header__title");
@@ -166,26 +182,40 @@ export const paginationRockets = async()=>{
     return div;
 }
 
-const getCapsulesId = async(e)=>{
+const getCapsulesId = async (e) => {
     e.preventDefault();
+  
     if(e.target.dataset.page){
         let paginacion = document.querySelector("#paginacion");
         paginacion.innerHTML = ""
         paginacion.append(await paginationCapsules(Number(e.target.dataset.page)))
+        setTimeout(() => {
+            let paginacion = document.querySelector("#paginacion");
+            let a1 = paginacion.children[0].children[1]
+            
+            a1.click();
+        }, 200);
     }
+  
     let a = e.target.parentElement.children;
-    for(let val of a){
-        val.classList.remove('activo');
+    for (let val of a) {
+      val.classList.remove('activo');
     }
     e.target.classList.add('activo');
-    
+  
+    let capsules = await getIdCapsules(e.target.id);
+    console.log(capsules);
+  
+    let description__item = document.querySelector("#description__item");
+    description__item.innerHTML = "";
+  
+    await nameCapsul(capsules.serial);
 
-    // let Rocket = await getAllRocketsId(e.target.id);
-    // console.log(Rocket);
 
-    // await informationRockets(Rocket.country, Rocket.description)
-    
 }
+
+
+
 
 export const paginationCapsules = async(page=1, limit=4)=>{  
      
@@ -228,4 +258,17 @@ export const paginationCapsules = async(page=1, limit=4)=>{
     //     <a href="#">&raquo;</a>
     // </div>
     return div;
+}
+
+
+
+
+
+
+export const paginationCompany = async() => {
+    let data = await getCompany()
+    await clear()
+
+    await nameCompany(data.name);
+
 }
