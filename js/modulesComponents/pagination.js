@@ -1628,6 +1628,42 @@ const getShipId = async (e) => {
     await nameShip(ships.name);
     await Shipsimage(ships);
 
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    // Crea y configura la primera imagen
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "storage/img/icons/ship1.gif");
+    img1.classList.add("imagen-paginacion-roadster");
+    img1.style.position = "absolute";
+    img1.style.top = "100px";
+    img1.style.left = "50px";
+    img1.style.width = "300px";
+    img1.style.height = "250px";
+    img1.style.marginTop = "220px";
+    img1.style.marginLeft = "-20px";
+    img1.style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.5)";
+    img1.style.borderRadius = "10%";
+    sectionImage.appendChild(img1);
+
+    console.log("Primera imagen añadida:", img1);
+
+    // Crea y configura la segunda imagen
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/icons/ship2.gif"); // Cambia la ruta de la imagen
+    img2.classList.add("imagen-paginacion-roadster");
+    img2.style.position = "absolute";
+    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img2.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img2.style.height = "250px";
+    img2.style.marginTop = "20px";
+    img2.style.marginLeft = "530px";
+    img2.style.borderRadius = "10%";
+    sectionImage.appendChild(img2);
+
+    console.log("Segunda imagen añadida:", img2);
+
 };
 
 
