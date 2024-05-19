@@ -129,7 +129,19 @@ import {
     Landpadslocality,
     Landpadsregion,
     Landpadslatitude,
-    Landpadslongitude
+    Landpadslongitude,
+    LaunchesId,
+    Launchesdetails,
+    Launchesrocket,
+    LaunchesWikipedia,
+    Launchesstatic_fire_date_utc,
+    Launchesstatic_fire_date_unix,
+    Launcheswindow,
+    Launchesnet,
+    Launchessuccess,
+    Launcheflight_number,
+    Launchedate_precision,
+    Launcheupcoming
 } from "./information.js";
 
 
@@ -1509,6 +1521,48 @@ const getIDLaunches = async (e) => {
 
     await nameLaunches(Launches.name);
     await Launchesimage([Launches]);
+
+
+    let LaunchesdetailsElement = await Launchesdetails(Launches.details);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(LaunchesdetailsElement);
+
+    let LaunchesWikipediaElement = await LaunchesWikipedia(Launches.wikipedia);
+    descriptionItem.append(LaunchesWikipediaElement);
+
+
+    let LaunchesIdElement = await LaunchesId (Launches.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(LaunchesIdElement);
+
+    let LaunchesrocketElement = await Launchesrocket (Launches.rocket); 
+    information__2.appendChild(LaunchesrocketElement);
+
+    let Launchesstatic_fire_date_utcElement = await Launchesstatic_fire_date_utc (Launches.static_fire_date_utc); 
+    information__2.appendChild(Launchesstatic_fire_date_utcElement);
+
+    let Launchesstatic_fire_date_unixElement = await Launchesstatic_fire_date_unix (Launches.static_fire_date_unix); 
+    information__2.appendChild(Launchesstatic_fire_date_unixElement);
+
+    let LauncheswindowElement = await Launcheswindow (Launches.window); 
+    information__2.appendChild(LauncheswindowElement);
+
+    let LaunchesnetElement = await Launchesnet (Launches.net); 
+    information__2.appendChild(LaunchesnetElement);
+
+    let LaunchessuccessElement = await Launchessuccess (Launches.success); 
+    information__2.appendChild(LaunchessuccessElement);
+
+    let Launcheflight_numberElement = await Launcheflight_number (Launches.flight_number); 
+    information__2.appendChild(Launcheflight_numberElement);
+
+    let Launchedate_precisionElement = await Launchedate_precision (Launches.date_precision); 
+    information__2.appendChild(Launchedate_precisionElement);
+
+    let LauncheupcomingElement = await Launcheupcoming (Launches.upcoming); 
+    information__2.appendChild(LauncheupcomingElement);
 
 
     let sectionImage = document.querySelector("#section__information__1");
