@@ -1759,3 +1759,395 @@ export const Dragonsodry_mass_lb  = async(dry_mass_lb)=>{
 
     return div; 
 }
+
+
+// -------------seccion informacion de Ships---------------------
+
+
+export const ShipId = async (id) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:";
+    let small = document.createElement('small');
+    small.textContent = id;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const ShipsLaunches = async (launches) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launches:";
+    divLast.appendChild(h3);
+
+    let small = document.createElement('small');
+    if (Array.isArray(launches) && launches.length > 0) {
+        // Si hay más de una lanzamiento, creamos una matriz de lanzamientos
+        let launchesArray = JSON.stringify(launches, null, 2);
+        // Eliminamos el primer y último carácter (los corchetes)
+        launchesArray = launchesArray.slice(1, -1);
+        small.textContent = launchesArray;
+    } else {
+        // Si solo hay una lanzamiento, creamos un solo elemento de texto
+        small.textContent = launches;
+    }
+    small.style.fontSize = "10px"; // Tamaño de fuente más pequeño
+    divLast.appendChild(small);
+
+    div.appendChild(divFirst);
+    div.appendChild(divLast);
+
+    return div;
+};
+
+
+
+export const Shipactive= async (active) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Active:";
+    let small = document.createElement('small');
+    small.textContent = active;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Shipahome_port = async (home_port) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Home Port:";
+    let small = document.createElement('small');
+    small.textContent = home_port;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Shiplegacy_id = async (legacy_id) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Legacy Id:";
+    let small = document.createElement('small');
+    small.textContent = legacy_id;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Shiptype= async (type) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Type:";
+    let small = document.createElement('small');
+    small.textContent = type;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const shipsRoles = async (roles) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Roles:";
+    divLast.appendChild(h3);
+
+    if (Array.isArray(roles) && roles.length > 0) {
+        let ul = document.createElement('ul');
+        roles.forEach((role) => {
+            let li = document.createElement('li');
+            let small = document.createElement('small');
+            small.textContent = role;
+            li.appendChild(small);
+            ul.appendChild(li);
+        });
+        divLast.appendChild(ul);
+    } else {
+        let small = document.createElement('small');
+        small.textContent = roles;
+        divLast.appendChild(small);
+    }
+
+    div.appendChild(divFirst);
+    div.appendChild(divLast);
+
+    return div;
+};
+
+
+
+export const shipLink = async (link) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container2');
+
+    let divWrapper = document.createElement('div');
+    divWrapper.style.display = "flex";
+    divWrapper.style.alignItems = "center";
+    divWrapper.style.marginBottom = "20px";
+    divWrapper.style.marginLeft = "20px";
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+
+    let h3 = document.createElement('h3');
+    h3.textContent = "Link:";
+    h3.style.color = "white";
+    h3.style.marginLeft = "20px";
+    divLast.appendChild(h3);
+
+    // Crear un enlace (<a>) para redirigir al usuario al enlace proporcionado
+    let linkElement = document.createElement('a');
+    linkElement.textContent = "Read here";
+    linkElement.style.color = "white";
+    linkElement.style.marginLeft = "20px";
+    linkElement.style.textDecoration = "underline";
+    linkElement.href = link;
+    linkElement.style.fontSize = "9px";
+    linkElement.target = "_blank";
+
+    divLast.appendChild(linkElement);
+
+    divWrapper.appendChild(divFirst);
+    divWrapper.appendChild(divLast);
+
+    div.appendChild(divWrapper);
+
+    return div;
+}
+
+
+export const shipimo = async (imo) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Imo:";
+    let small = document.createElement('small');
+    small.textContent = imo !== null ? imo : 'No Data'; // Verifica si imo es null
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div;
+};
+
+
+
+export const shipmmsi= async (mmsi) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "mmsi:";
+    let small = document.createElement('small');
+    small.textContent = mmsi !== null ? mmsi : 'No Data'; // Verifica si imo es null
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div;
+};
+
+
+export const shipabs= async (abs) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "abs:";
+    let small = document.createElement('small');
+    small.textContent = abs !== null ? abs : 'No Data'; // Verifica si imo es null
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div;
+};
+
+
+export const shipmass_kg = async (mass_kg) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Mass Kg:";
+    let small = document.createElement('small');
+    small.textContent = mass_kg !== null ? mass_kg : 'No Data'; // Verifica si imo es null
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div;
+};
+
+
+export const shipyear_built = async (year_built) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Year Built:";
+    let small = document.createElement('small');
+    small.textContent = year_built !== null ? year_built : 'No Data'; // Verifica si imo es null
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div;
+};
+
+
+export const shipstatus = async (status) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/ancla.png");
+    img.setAttribute("width", "50");
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "status:";
+    let small = document.createElement('small');
+    small.textContent = status !== null ? status : 'No Data'; // Verifica si imo es null
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div;
+};

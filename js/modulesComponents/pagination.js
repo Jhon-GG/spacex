@@ -92,7 +92,21 @@ import {
     Dragonsorbit_duration_yr,
     DragonWikipedia,
     Dragonsodry_mass_kg,
-    Dragonsodry_mass_lb
+    Dragonsodry_mass_lb,
+    ShipId,
+    ShipsLaunches,
+    Shipactive,
+    Shipahome_port,
+    Shiplegacy_id,
+    Shiptype,
+    shipsRoles,
+    shipLink,
+    shipimo,
+    shipmmsi,
+    shipabs,
+    shipmass_kg,
+    shipyear_built,
+    shipstatus
 } from "./information.js";
 
 
@@ -1786,6 +1800,54 @@ const getShipId = async (e) => {
 
     await nameShip(ships.name);
     await Shipsimage(ships);
+
+
+    let ShipsLaunchesElement = await ShipsLaunches(ships.launches);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(ShipsLaunchesElement);
+
+    let Shiplegacy_idElement = await Shiplegacy_id(ships.legacy_id);
+    descriptionItem.append(Shiplegacy_idElement);
+
+    let shipsRolesElement = await shipsRoles(ships.roles);
+    descriptionItem.append(shipsRolesElement);
+
+
+    let ShipIdElement = await ShipId (ships.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(ShipIdElement);
+
+    let ShipactiveElement = await Shipactive (ships.active); 
+    information__2.appendChild(ShipactiveElement);
+
+    let Shipahome_portElement = await Shipahome_port (ships.home_port); 
+    information__2.appendChild(Shipahome_portElement);
+
+    let ShiptypeElement = await Shiptype (ships.type); 
+    information__2.appendChild(ShiptypeElement);
+
+    let shipLinkElement = await shipLink (ships.link); 
+    information__2.appendChild(shipLinkElement);
+
+    let shipimoElement = await shipimo (ships.imo); 
+    information__2.appendChild(shipimoElement);
+
+    let shipmmsiElement = await shipmmsi (ships.mmsi); 
+    information__2.appendChild(shipmmsiElement);
+
+    let shipabsElement = await shipabs (ships.abs); 
+    information__2.appendChild(shipabsElement);
+
+    let shipmass_kgElement = await shipmass_kg (ships.mass_kg); 
+    information__2.appendChild(shipmass_kgElement);
+
+    let shipyear_builtElement = await shipyear_built (ships.year_built); 
+    information__2.appendChild(shipyear_builtElement);
+
+    let shipstatusElement = await shipstatus (ships.status); 
+    information__2.appendChild(shipstatusElement);
 
 
     let sectionImage = document.querySelector("#section__information__1");
