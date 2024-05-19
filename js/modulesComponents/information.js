@@ -406,3 +406,315 @@ export const companytwitter = async (twitter) => {
     return div;
   };
   
+
+
+// -------------seccion informacion de Roadster---------------------
+
+export const RoadserId  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const orbit_type  = async(orbit_type)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Orbit Type:"
+    let small = document.createElement('small');
+    small.textContent = orbit_type
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const launch_date_utc  = async(launch_date_utc)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launch Date Utc:"
+    let small = document.createElement('small');
+    small.textContent = launch_date_utc
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const norad_id  = async(norad_id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Norad Id:"
+    let small = document.createElement('small');
+    small.textContent = norad_id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const inclination  = async(inclination)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "inclination:"
+    let small = document.createElement('small');
+    small.textContent = inclination
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const longitude  = async(longitude)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "longitude:"
+    let small = document.createElement('small');
+    small.textContent = longitude
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const period_days  = async(period_days)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Period Days:"
+    let small = document.createElement('small');
+    small.textContent = period_days
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const eccentricity  = async(eccentricity)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "eccentricity:"
+    let small = document.createElement('small');
+    small.textContent = eccentricity
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const detailsRoadster  = async(details)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Details:"
+    let small = document.createElement('small');
+    small.textContent = details
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const earth_distance_km  = async(earth_distance_km)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Earth Distance Km:"
+    let small = document.createElement('small');
+    small.textContent = earth_distance_km
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+
+export const mars_distance_mi  = async(mars_distance_mi)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Mars Distance Mi:"
+    let small = document.createElement('small');
+    small.textContent = mars_distance_mi
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const speed_kph  = async(speed_kph)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Speed Kph:"
+    let small = document.createElement('small');
+    small.textContent = speed_kph
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const epoch_jd  = async(epoch_jd)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/car.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Epoch Jd:"
+    let small = document.createElement('small');
+    small.textContent = epoch_jd
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}

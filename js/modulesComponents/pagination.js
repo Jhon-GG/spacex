@@ -41,7 +41,20 @@ import {
     cto_propulsion,
     valuation,
     coo,
-    companytwitter
+    companytwitter,
+    RoadserId,
+    orbit_type,
+    launch_date_utc,
+    norad_id,
+    inclination,
+    longitude,
+    period_days,
+    eccentricity,
+    detailsRoadster,
+    earth_distance_km,
+    mars_distance_mi,
+    speed_kph,
+    epoch_jd
 } from "./information.js";
 
 
@@ -486,13 +499,104 @@ export const paginationCompany = async() => {
 // -------------------Seccion de Roadster ------------------
 
 export const paginationRoadster = async (e) => {
-    let data = await getRoadster()
-    await clear()
+    let data = await getRoadster();
+    await clear();
 
     await nameRoadsters(data.name);
     await Roadsterimage(data.flickr_images);
 
-}
+
+
+    let detailsRoadsterElement = await detailsRoadster(data.details);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(detailsRoadsterElement);
+
+
+
+    let RoadserIdElement = await RoadserId(data.id); // Espera a que la función asíncrona se resuelva
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(RoadserIdElement);
+
+    let orbit_typeElement = await orbit_type(data.orbit_type); 
+    information__2.appendChild(orbit_typeElement);
+
+    let launch_date_utcElement = await launch_date_utc(data.launch_date_utc); 
+    information__2.appendChild(launch_date_utcElement);
+
+    let norad_idElement = await norad_id(data.norad_id); 
+    information__2.appendChild(norad_idElement);
+
+    let inclinationElement = await inclination(data.inclination); 
+    information__2.appendChild(inclinationElement);
+
+    let longitudeElement = await longitude(data.longitude); 
+    information__2.appendChild(longitudeElement);
+
+    let period_daysElement = await period_days(data.period_days); 
+    information__2.appendChild(period_daysElement);
+
+
+    let eccentricityElement = await eccentricity(data.eccentricity); 
+    information__2.appendChild(eccentricityElement);
+
+    let earth_distance_kmElement = await earth_distance_km(data.earth_distance_km); 
+    information__2.appendChild(earth_distance_kmElement);
+
+
+    let mars_distance_miElement = await mars_distance_mi(data.mars_distance_mi); 
+    information__2.appendChild(mars_distance_miElement);
+
+
+    let speed_kphElement = await speed_kph(data.speed_kph); 
+    information__2.appendChild(speed_kphElement);
+
+    let epoch_jdElement = await epoch_jd(data.epoch_jd); 
+    information__2.appendChild(epoch_jdElement);
+
+
+
+    let sectionImage = document.querySelector("#section__information__1");
+    if (!sectionImage) {
+        console.error("El elemento #section__information__1 no existe en el DOM.");
+        return;
+    }
+
+    // Crea y configura la primera imagen
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "storage/img/icons/tesla1.gif");
+    img1.classList.add("imagen-paginacion-roadster");
+    img1.style.position = "absolute";
+    img1.style.top = "100px";
+    img1.style.left = "50px";
+    img1.style.width = "300px";
+    img1.style.height = "250px";
+    img1.style.marginTop = "220px";
+    img1.style.marginLeft = "-20px";
+    img1.style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.5)";
+    img1.style.borderRadius = "10%";
+    sectionImage.appendChild(img1);
+
+    console.log("Primera imagen añadida:", img1);
+
+    // Crea y configura la segunda imagen
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/icons/tesla2.gif"); // Cambia la ruta de la imagen
+    img2.classList.add("imagen-paginacion-roadster");
+    img2.style.position = "absolute";
+    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img2.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img2.style.height = "250px";
+    img2.style.marginTop = "20px";
+    img2.style.marginLeft = "530px";
+    img2.style.borderRadius = "10%";
+    sectionImage.appendChild(img2);
+
+    console.log("Segunda imagen añadida:", img2);
+};
+
 
 
 
