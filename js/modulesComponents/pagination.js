@@ -72,7 +72,12 @@ import {
     corertls_attempts,
     corertls_landings,
     coreasds_attempts,
-    corelast_update
+    corelast_update,
+    crewId,
+    crewWikipedia,
+    crewagency,
+    crewLaunches,
+    crewstatus
 } from "./information.js";
 
 
@@ -892,6 +897,65 @@ const getAllIDCrew = async (e) => {
 
     await nameCrew(crew.name);
     await Crewimage([{ name: crew.name, image: crew.image }]);
+
+
+
+    let crewagencyElement = await crewagency(crew.agency);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(crewagencyElement);
+
+    let crewWikipediaElement = await crewWikipedia(crew.wikipedia);
+    descriptionItem.append(crewWikipediaElement);
+
+
+
+    let crewIdElement = await crewId (crew.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(crewIdElement);
+
+    let crewLaunchesElement = await crewLaunches (crew.launches); 
+    information__2.appendChild(crewLaunchesElement);
+
+    let crewstatusElement = await crewstatus (crew.status); 
+    information__2.appendChild(crewstatusElement);
+
+
+    let sectionImage = document.querySelector("#section__information__1");
+
+    // Crea y configura la primera imagen
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "storage/img/icons/crew1.gif");
+    img1.classList.add("imagen-paginacion-roadster");
+    img1.style.position = "absolute";
+    img1.style.top = "100px";
+    img1.style.left = "50px";
+    img1.style.width = "300px";
+    img1.style.height = "250px";
+    img1.style.marginTop = "220px";
+    img1.style.marginLeft = "-20px";
+    img1.style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.5)";
+    img1.style.borderRadius = "10%";
+    sectionImage.appendChild(img1);
+
+    console.log("Primera imagen añadida:", img1);
+
+    // Crea y configura la segunda imagen
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/icons/crew2.gif"); // Cambia la ruta de la imagen
+    img2.classList.add("imagen-paginacion-roadster");
+    img2.style.position = "absolute";
+    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img2.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img2.style.height = "250px";
+    img2.style.marginTop = "20px";
+    img2.style.marginLeft = "530px";
+    img2.style.borderRadius = "10%";
+    sectionImage.appendChild(img2);
+
+    console.log("Segunda imagen añadida:", img2);
 
 
 };

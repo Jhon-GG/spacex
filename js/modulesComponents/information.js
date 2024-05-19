@@ -1180,3 +1180,167 @@ export const corelast_update = async (last_update) => {
 
     return div; 
 };
+
+
+// -------------seccion informacion de Crew---------------------
+
+export const crewId  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/astro.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const crewWikipedia = async (wikipedia) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container2');
+
+    let divWrapper = document.createElement('div');
+    divWrapper.style.display = "flex"; // Utilizar flexbox
+    divWrapper.style.alignItems = "center"; // Alinear elementos verticalmente al centro
+    divWrapper.style.marginBottom = "20px"; 
+    divWrapper.style.marginLeft = "20px";
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/astro.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+
+    let h3 = document.createElement('h3');
+    h3.textContent = "Wikipedia:";
+    h3.style.color = "white"; // Establecer el color del texto en blanco
+    h3.style.marginLeft = "20px";
+    divLast.appendChild(h3);
+
+    // Crear un elemento de texto para el enlace de Wikipedia
+    let readHereLink = document.createElement('span');
+    readHereLink.textContent = "Read Here";
+    readHereLink.style.color = "white"; // Establecer el color del texto en blanco
+    readHereLink.style.marginLeft = "20px";
+    readHereLink.style.cursor = "pointer"; // Cambiar el cursor al estilo de enlace
+    readHereLink.style.textDecoration = "underline"; // Subrayar el texto
+    readHereLink.style.fontSize = "9px";
+
+    // Agregar un evento de clic para redirigir al enlace de Wikipedia
+    readHereLink.addEventListener('click', () => {
+        window.open(wikipedia, '_blank'); // Abrir enlace en una nueva pestaña
+    });
+
+    // Agregar el enlace al contenedor
+    divLast.appendChild(readHereLink);
+
+    divWrapper.appendChild(divFirst);
+    divWrapper.appendChild(divLast);
+
+    div.appendChild(divWrapper);
+
+    return div;
+}
+
+
+
+export const crewagency = async(agency)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/astro.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Agency:"
+    let small = document.createElement('small');
+    small.textContent = agency
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const crewLaunches = async (launches) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launches:";
+    divLast.appendChild(h3);
+
+    let small = document.createElement('small');
+    if (Array.isArray(launches) && launches.length > 0) {
+        // Si hay más de una lanzamiento, creamos una matriz de lanzamientos
+        let launchesArray = JSON.stringify(launches, null, 2);
+        // Eliminamos el primer y último carácter (los corchetes)
+        launchesArray = launchesArray.slice(1, -1);
+        small.textContent = launchesArray;
+    } else {
+        // Si solo hay una lanzamiento, creamos un solo elemento de texto
+        small.textContent = launches;
+    }
+    small.style.fontSize = "10px"; // Tamaño de fuente más pequeño
+    divLast.appendChild(small);
+
+    div.appendChild(divFirst);
+    div.appendChild(divLast);
+
+    return div;
+};
+
+
+
+export const crewstatus = async(status)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/astro.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Status:"
+    let small = document.createElement('small');
+    small.textContent = status
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
