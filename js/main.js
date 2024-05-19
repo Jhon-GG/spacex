@@ -9,7 +9,7 @@ import {
     // paginationShips,
     paginationCompany,
     paginationDragons,
-    // paginationLaunchpads,
+    paginationLaunchpads,
     paginationHistory,
     // paginationPayloads,
     paginationRoadster
@@ -107,13 +107,13 @@ dragons.addEventListener("click", async(e)=>{
 })
 
 
-// let launchpads = document.querySelector("#launchpads")
-// launchpads.addEventListener("click", async(e)=>{
-//     await footerSelect(e, launchpads)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationLaunchpads())
-// })
+let launchpads = document.querySelector("#launchpads")
+launchpads.addEventListener("click", async(e)=>{
+    await footerSelect(e, launchpads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLaunchpads())
+})
 
 
 let history = document.querySelector("#history")
