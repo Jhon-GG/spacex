@@ -11,7 +11,7 @@ import {
     paginationDragons,
     paginationLaunchpads,
     paginationHistory,
-    // paginationPayloads,
+    paginationPayloads,
     paginationRoadster
 } from "./modulesComponents/pagination.js";
 
@@ -125,13 +125,13 @@ history.addEventListener("click", async(e)=>{
 })
 
 
-// let payloads = document.querySelector("#payloads")
-// payloads.addEventListener("click", async(e)=>{
-//     await footerSelect(e, payloads)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationPayloads())
-// })
+let payloads = document.querySelector("#payloads")
+payloads.addEventListener("click", async(e)=>{
+    await footerSelect(e, payloads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationPayloads())
+})
 
 let roadster = document.querySelector("#roadster");
 roadster.addEventListener("click", async (e) => {
