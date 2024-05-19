@@ -141,7 +141,18 @@ import {
     Launchessuccess,
     Launcheflight_number,
     Launchedate_precision,
-    Launcheupcoming
+    Launcheupcoming,
+    LaunchpadsId,
+    Launchpadsdetails,
+    Launchpadsfull_name,
+    Launchpadslocality,
+    Launchpadsregion,
+    Launchpadslatitude,
+    Launchpadslongitude,
+    Launchpadstimezone,
+    Launchpadsstatus,
+    Launchpadlaunch_attempts,
+    Launchpadlaunch_successes
 } from "./information.js";
 
 
@@ -1674,6 +1685,48 @@ const getAllIdLaunchpads = async (e) => {
     await nameLaunchpad(launchpad.name);
     await LaunchpadsImage ([launchpad]);
 
+
+    let LaunchpadsdetailsElement = await Launchpadsdetails(launchpad.details);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(LaunchpadsdetailsElement);
+
+
+    let Launchpadsfull_nameElement = await Launchpadsfull_name(launchpad.full_name);
+    descriptionItem.append(Launchpadsfull_nameElement);
+
+
+    let LaunchpadsIdElement = await LaunchpadsId (launchpad.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(LaunchpadsIdElement);
+
+
+    let LaunchpadslocalityElement = await Launchpadslocality (launchpad.locality); 
+    information__2.appendChild(LaunchpadslocalityElement);
+
+    let LaunchpadsregionElement = await Launchpadsregion (launchpad.region); 
+    information__2.appendChild(LaunchpadsregionElement);
+
+
+    let LaunchpadslatitudeElement = await Launchpadslatitude (launchpad.latitude); 
+    information__2.appendChild(LaunchpadslatitudeElement);
+
+
+    let LaunchpadslongitudeElement = await Launchpadslongitude (launchpad.longitude); 
+    information__2.appendChild(LaunchpadslongitudeElement);
+
+    let LaunchpadstimezoneElement = await Launchpadstimezone (launchpad.timezone); 
+    information__2.appendChild(LaunchpadstimezoneElement);
+
+    let LaunchpadsstatusElement = await Launchpadsstatus (launchpad.status); 
+    information__2.appendChild(LaunchpadsstatusElement);
+
+    let Launchpadlaunch_attemptsElement = await Launchpadlaunch_attempts (launchpad.launch_attempts); 
+    information__2.appendChild(Launchpadlaunch_attemptsElement);
+
+    let Launchpadlaunch_successesElement = await Launchpadlaunch_successes (launchpad.launch_successes); 
+    information__2.appendChild(Launchpadlaunch_successesElement);
 
     let sectionImage = document.querySelector("#section__information__1");
 

@@ -3040,3 +3040,269 @@ export const Launcheupcoming = async (upcoming) => {
 
     return div; 
 };
+
+
+// -------------seccion informacion de Launchpads  ---------------------
+
+
+export const LaunchpadsId = async (id) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:";
+    let small = document.createElement('small');
+    small.textContent = id;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+export const Launchpadsdetails = async (details) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Details:";
+    let small = document.createElement('small');
+    small.textContent = details;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadsfull_name = async (full_name) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Full Name:";
+    let small = document.createElement('small');
+    small.textContent = full_name;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadslocality = async (locality) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Locality:";
+    let small = document.createElement('small');
+    small.textContent = locality;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadsregion = async (region) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Region:";
+    let small = document.createElement('small');
+    small.textContent = region;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadslatitude = async (latitude) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Latitude:";
+    let small = document.createElement('small');
+    small.textContent = latitude;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadslongitude = async (longitude) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Longitude:";
+    let small = document.createElement('small');
+    small.textContent = longitude;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadstimezone= async (timezone) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Timezone:";
+    let small = document.createElement('small');
+    small.textContent = timezone;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadsstatus= async (status) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Status:";
+    let small = document.createElement('small');
+    small.textContent = status;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadlaunch_attempts = async (launch_attempts) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launch Attempts:";
+    let small = document.createElement('small');
+    small.textContent = launch_attempts;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Launchpadlaunch_successes= async (launch_successes) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/launchpa.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launch Successes:";
+    let small = document.createElement('small');
+    small.textContent = launch_successes;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};

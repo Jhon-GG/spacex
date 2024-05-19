@@ -143,5 +143,5 @@ ships.addEventListener("click", async(e)=>{
 })
 
 
-launches.click();
+launchpads.click();
 
