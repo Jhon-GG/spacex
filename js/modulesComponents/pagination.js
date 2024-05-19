@@ -181,6 +181,9 @@ export const clear = async()=>{
 
 }
 
+
+// -------------------Seccion de Rockets ------------------
+
 const getRocketsId = async(e)=>{
     e.preventDefault();
     // console.log(e.target);
@@ -240,6 +243,17 @@ export const paginationRockets = async()=>{
     
     return div;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 const getCapsulesId = async (e) => {
     e.preventDefault();
@@ -323,6 +337,9 @@ export const paginationCapsules = async(page=1, limit=4)=>{
 
 
 
+// -------------------Seccion de Company ------------------
+
+
 
 export const paginationCompany = async() => {
     let data = await getCompany()
@@ -333,6 +350,14 @@ export const paginationCompany = async() => {
 }
 
 
+
+
+
+
+
+
+// -------------------Seccion de Roadster ------------------
+
 export const paginationRoadster = async (e) => {
     let data = await getRoadster()
     await clear()
@@ -342,6 +367,12 @@ export const paginationRoadster = async (e) => {
 }
 
 
+
+
+
+
+
+// -------------------Seccion de Core ------------------
 
 const getAllCoreId = async (e) => {
     e.preventDefault();
@@ -406,6 +437,17 @@ export const paginationCores = async(page=1, limit=4)=>{
 
 
 
+
+
+
+
+
+
+
+
+
+// -------------------Seccion de Crew ------------------
+
 const getAllIDCrew = async (e) => {
     e.preventDefault();
     if(e.target.dataset.page){
@@ -466,6 +508,13 @@ export const paginationCrew = async(page=1, limit=4)=>{
     return div;
 }
 
+
+
+
+
+
+
+// -------------------Seccion de Dragon ------------------
 
 
 const getAllIdDragon = async (e) => {
@@ -530,6 +579,11 @@ export const paginationDragons = async(page=1, limit=4)=>{
 
 
 
+
+
+
+
+// -------------------Seccion de History ------------------
 
 
 const getAllIDHistory = async (e) => {
@@ -601,6 +655,9 @@ export const paginationHistory = async(page=1, limit=4)=>{
 
 
 
+// -------------------Seccion de Landpads ------------------
+
+
 const getAllIdLandpads = async (e) => {
     e.preventDefault();
     if(e.target.dataset.page){
@@ -664,6 +721,14 @@ export const paginationLandpads = async(page=1, limit=4)=>{
 
 
 
+
+
+
+
+
+
+// -------------------Seccion de Launches ------------------
+
 const getIDLaunches = async (e) => {
     e.preventDefault();
     if(e.target.dataset.page){
@@ -723,6 +788,13 @@ export const paginationLaunches = async(page=1, limit=4)=>{
     return div;
 }
 
+
+
+
+
+
+
+// -------------------Seccion de Launchpads ------------------
 
 
 const getAllIdLaunchpads = async (e) => {
@@ -792,6 +864,15 @@ export const paginationLaunchpads = async(page=1, limit=4)=>{
 
 
 
+
+
+
+
+
+
+
+// -------------------Seccion de Payloads ------------------
+
 const getPayloadsId = async (e) => {
     e.preventDefault();
     if(e.target.dataset.page){
@@ -858,6 +939,7 @@ export const paginationPayloads = async(page=1, limit=4)=>{
 
 
 
+// -------------------Seccion de Ships ------------------
 
 const getShipId = async (e) => {
     e.preventDefault();
