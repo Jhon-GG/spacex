@@ -73,6 +73,11 @@ import {
     getIDDragons
 } from "../modules/dragons.js"
 
+import {
+    getAllHistory,
+    getIdHistory
+} from "../modules/history.js"
+
 export const load = async()=>{
     let header__title = document.querySelector("#header__title");
     header__title.innerHTML = `
@@ -482,6 +487,72 @@ export const paginationDragons = async(page=1, limit=4)=>{
     end.innerHTML = "&raquo;";
     end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
     end.addEventListener("click", getAllIdDragon)
+    div.appendChild(end);
+    console.log(div);
+    let [back, a1,a2,a3,a4, next] = div.children
+    a1.click();
+    return div;
+}
+
+
+
+
+
+
+const getAllIDHistory = async (e) => {
+    e.preventDefault();
+    if(e.target.dataset.page){
+        let paginacion = document.querySelector("#paginacion");
+        paginacion.innerHTML = ""
+        paginacion.append(await paginationHistory(Number(e.target.dataset.page)))
+        setTimeout(() => {
+            let paginacion = document.querySelector("#paginacion");
+            let a1 = paginacion.children[0].children[1]
+
+            a1.click();
+        }, 200);
+    }
+    e.target.classList.add('activo');
+
+    let history = await getIdHistory(e.target.id);
+    console.log(history); // Verifica los datos en la consola
+
+    await nameHistory(history.title);
+
+
+};
+
+
+
+
+export const paginationHistory = async(page=1, limit=4)=>{  
+     
+    let {docs, pagingCounter, totalPages, nextPage} = await getAllHistory(page, limit)
+
+    let div = document.createElement("div");
+    div.classList.add("buttom__paginacion")
+
+    
+    let start = document.createElement("a");
+    start.setAttribute("href","#");
+    start.innerHTML = "&laquo";
+    start.setAttribute("data-page", (page==1) ? totalPages : page-1)
+    start.addEventListener("click", getAllIDHistory)
+    div.appendChild(start);
+    docs.forEach((val,id) => {
+        let a = document.createElement("a");
+        a.setAttribute("href","#");
+        a.id = val.id;
+        a.textContent = pagingCounter;
+        a.addEventListener("click", getAllIDHistory)
+        div.appendChild(a);
+        pagingCounter++
+    });
+    let end = document.createElement("a");
+    end.setAttribute("href","#");
+    end.innerHTML = "&raquo;";
+    end.setAttribute("data-page", (page && nextPage) ? page+1 : 1)
+    end.addEventListener("click", getAllIDHistory)
     div.appendChild(end);
     console.log(div);
     let [back, a1,a2,a3,a4, next] = div.children

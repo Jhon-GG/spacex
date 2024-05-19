@@ -10,7 +10,7 @@ import {
     paginationCompany,
     paginationDragons,
     // paginationLaunchpads,
-    // paginationHistory,
+    paginationHistory,
     // paginationPayloads,
     paginationRoadster
 } from "./modulesComponents/pagination.js";
@@ -116,13 +116,13 @@ dragons.addEventListener("click", async(e)=>{
 // })
 
 
-// let history = document.querySelector("#history")
-// history.addEventListener("click", async(e)=>{
-//     await footerSelect(e, history)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationHistory())
-// })
+let history = document.querySelector("#history")
+history.addEventListener("click", async(e)=>{
+    await footerSelect(e, history)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationHistory())
+})
 
 
 // let payloads = document.querySelector("#payloads")
