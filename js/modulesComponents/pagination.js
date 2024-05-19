@@ -54,7 +54,16 @@ import {
     earth_distance_km,
     mars_distance_mi,
     speed_kph,
-    epoch_jd
+    epoch_jd,
+    capsulesId,
+    capsulesLaunches,
+    capsulestype,
+    capsulesstatus,
+    capsulesSerial,
+    capsuleslast_update,
+    capsulesland_landings,
+    capsuleswater_landings,
+    capsulesreuse_count
 } from "./information.js";
 
 
@@ -337,10 +346,98 @@ const getCapsulesId = async (e) => {
     let capsules = await getIdCapsules(e.target.id);
     console.log(capsules);
   
-    let description__item = document.querySelector("#description__item");
-    description__item.innerHTML = "";
-  
     await nameCapsul(capsules.serial);
+
+
+    let capsulesLaunchesElement = await capsulesLaunches(capsules.launches);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(capsulesLaunchesElement);
+
+
+    let capsuleslast_updateElement = await capsuleslast_update(capsules.last_update);
+    descriptionItem.append(capsuleslast_updateElement);
+
+    let capsulesland_landingsElement = await capsulesland_landings(capsules.land_landings);
+    descriptionItem.append(capsulesland_landingsElement);
+
+    let capsuleswater_landingsElement = await capsuleswater_landings(capsules.water_landings);
+    descriptionItem.append(capsuleswater_landingsElement);
+
+    let capsulesreuse_countElement = await capsulesreuse_count(capsules.reuse_count);
+    descriptionItem.append(capsulesreuse_countElement);
+
+
+
+    let capsulesIdElement = await capsulesId(capsules.id); // Espera a que la función asíncrona se resuelva
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(capsulesIdElement);
+
+
+
+    let capsulestypeElement = await capsulestype(capsules.type);
+    information__2.appendChild(capsulestypeElement);
+
+
+    let capsulesstatusElement = await capsulesstatus(capsules.status);
+    information__2.appendChild(capsulesstatusElement);
+
+
+    let capsulesSerialElement = await capsulesSerial(capsules.serial);
+    information__2.appendChild(capsulesSerialElement);
+
+    let sectionImage = document.querySelector("#section__information__1");
+    
+
+    // Crea y configura la primera imagen
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "storage/img/icons/capsule1.gif");
+    img1.classList.add("imagen-paginacion-roadster");
+    img1.style.position = "absolute";
+    img1.style.top = "100px";
+    img1.style.left = "50px";
+    img1.style.width = "300px";
+    img1.style.height = "250px";
+    img1.style.marginTop = "220px";
+    img1.style.marginLeft = "-20px";
+    img1.style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.5)";
+    img1.style.borderRadius = "10%";
+    sectionImage.appendChild(img1);
+
+    console.log("Primera imagen añadida:", img1);
+
+    // Crea y configura la segunda imagen
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/icons/capsule2.gif"); // Cambia la ruta de la imagen
+    img2.classList.add("imagen-paginacion-roadster");
+    img2.style.position = "absolute";
+    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img2.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img2.style.height = "250px";
+    img2.style.marginTop = "20px";
+    img2.style.marginLeft = "530px";
+    img2.style.borderRadius = "10%";
+    sectionImage.appendChild(img2);
+
+    console.log("Segunda imagen añadida:", img2);
+
+
+    let img3 = document.createElement("img");
+    img3.setAttribute("src", "storage/img/icons/capsule3.gif"); // Cambia la ruta de la imagen
+    img3.classList.add("imagen-paginacion-roadster");
+    img3.style.position = "absolute";
+    img3.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img3.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img3.style.width = "300px"; // Ajusta el ancho de la segunda imagen
+    img3.style.height = "250px";
+    img3.style.marginTop = "20px";
+    img3.style.marginLeft = "210px";
+    img3.style.borderRadius = "10%";
+    sectionImage.appendChild(img3);
+
+    console.log("Tercera imagen añadida:", img3);
 
 
 };
@@ -558,10 +655,7 @@ export const paginationRoadster = async (e) => {
 
 
     let sectionImage = document.querySelector("#section__information__1");
-    if (!sectionImage) {
-        console.error("El elemento #section__information__1 no existe en el DOM.");
-        return;
-    }
+    
 
     // Crea y configura la primera imagen
     let img1 = document.createElement("img");
@@ -595,6 +689,8 @@ export const paginationRoadster = async (e) => {
     sectionImage.appendChild(img2);
 
     console.log("Segunda imagen añadida:", img2);
+
+
 };
 
 

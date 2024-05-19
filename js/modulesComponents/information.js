@@ -718,3 +718,236 @@ export const epoch_jd  = async(epoch_jd)=>{
 
     return div; 
 }
+
+
+
+// -------------seccion informacion de Capsules---------------------
+
+export const capsulesId = async (id) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:";
+    let small = document.createElement('small');
+    small.textContent = id;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+
+export const capsulesLaunches = async (launches) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launches:";
+    divLast.appendChild(h3);
+
+    let small = document.createElement('small');
+    if (Array.isArray(launches) && launches.length > 0) {
+        // Si hay más de una lanzamiento, creamos una matriz de lanzamientos
+        let launchesArray = JSON.stringify(launches, null, 2);
+        // Eliminamos el primer y último carácter (los corchetes)
+        launchesArray = launchesArray.slice(1, -1);
+        small.textContent = launchesArray;
+    } else {
+        // Si solo hay una lanzamiento, creamos un solo elemento de texto
+        small.textContent = launches;
+    }
+    small.style.fontSize = "10px"; // Tamaño de fuente más pequeño
+    divLast.appendChild(small);
+
+    div.appendChild(divFirst);
+    div.appendChild(divLast);
+
+    return div;
+};
+
+
+export const capsulestype = async (type) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Type:";
+    let small = document.createElement('small');
+    small.textContent = type;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const capsulesstatus = async (status) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Status:";
+    let small = document.createElement('small');
+    small.textContent = status;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const capsulesSerial = async (serial) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Serial:";
+    let small = document.createElement('small');
+    small.textContent = serial;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const capsuleslast_update = async (last_update) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Last Update:";
+    let small = document.createElement('small');
+    small.textContent = last_update;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const capsulesland_landings = async (land_landings) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Land Landings:";
+    let small = document.createElement('small');
+    small.textContent = land_landings;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const capsuleswater_landings = async (water_landings) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Water Landings:";
+    let small = document.createElement('small');
+    small.textContent = water_landings;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const capsulesreuse_count = async (reuse_count) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/capsules.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Reuse Count:";
+    let small = document.createElement('small');
+    small.textContent = reuse_count;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
