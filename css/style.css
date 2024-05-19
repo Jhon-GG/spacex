@@ -476,7 +476,7 @@ progress[value]::-moz-progress-bar {
     height: 250px; 
     position:absolute;
     margin-top: 15px; 
-    margin-left: 450px;
+    margin-left: 400px;
 }
 
 .small-hola {

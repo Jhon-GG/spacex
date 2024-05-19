@@ -5,7 +5,7 @@ import {
     paginationCrew,
     // paginationLaunches,
     paginationCores,
-    // paginationLandpads,
+    paginationLandpads,
     // paginationShips,
     paginationCompany,
     paginationDragons,
@@ -72,13 +72,13 @@ cores.addEventListener("click", async(e)=>{
 })
 
 
-// let landpads = document.querySelector("#landpads")
-// landpads.addEventListener("click", async(e)=>{
-//     await footerSelect(e, landpads)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationLandpads())
-// })
+let landpads = document.querySelector("#landpads")
+landpads.addEventListener("click", async(e)=>{
+    await footerSelect(e, landpads)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLandpads())
+})
 
 // let ships = document.querySelector("#ships")
 // ships.addEventListener("click", async(e)=>{
