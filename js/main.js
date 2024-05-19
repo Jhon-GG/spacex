@@ -6,13 +6,13 @@ import {
     paginationLaunches,
     paginationCores,
     paginationLandpads,
-    // paginationShips,
     paginationCompany,
     paginationDragons,
     paginationLaunchpads,
     paginationHistory,
     paginationPayloads,
-    paginationRoadster
+    paginationRoadster,
+    paginationShips
 } from "./modulesComponents/pagination.js";
 
 
@@ -80,15 +80,6 @@ landpads.addEventListener("click", async(e)=>{
     paginacion.append(await paginationLandpads())
 })
 
-// let ships = document.querySelector("#ships")
-// ships.addEventListener("click", async(e)=>{
-//     await footerSelect(e, ships)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationShips())
-// })
-
-
 let company = document.querySelector("#company")
 company.addEventListener("click", async(e)=>{
     await footerSelect(e, company)
@@ -141,6 +132,15 @@ roadster.addEventListener("click", async (e) => {
     paginacion.innerHTML = "";
     await paginationRoadster(); 
 });
+
+
+let ships = document.querySelector("#ships")
+ships.addEventListener("click", async(e)=>{
+    await footerSelect(e, ships)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationShips())
+})
 
 
 rocket.click();
