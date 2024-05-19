@@ -31,9 +31,24 @@ import {
     informRocketEngineThrustSeaLevel, 
     informRocketEngineThrustVacuum
 } from "./inform.js";
+
+
+
+
+// importar imagenes
 import { 
-    imageRockets 
+    imageRockets,
+    Crewimage,
+    Launchesimage,
+    LandpadsImage,
+    Dragonsimage,
+    LaunchpadsImage,
+    Roadsterimage,
+    Shipsimage
 } from "./card.js";
+
+
+
 import { 
     progressRocketWeight,
     progressPayloadWeights, 
@@ -363,6 +378,7 @@ export const paginationRoadster = async (e) => {
     await clear()
 
     await nameRoadsters(data.name);
+    await Roadsterimage(data.flickr_images);
 
 }
 
@@ -467,6 +483,7 @@ const getAllIDCrew = async (e) => {
     console.log(crew);
 
     await nameCrew(crew.name);
+    await Crewimage([{ name: crew.name, image: crew.image }]);
 
 
 };
@@ -536,6 +553,7 @@ const getAllIdDragon = async (e) => {
     console.log(dragons); 
 
     await nameDragon(dragons.name);
+    await Dragonsimage(dragons.flickr_images);
 
 };
 
@@ -678,6 +696,8 @@ const getAllIdLandpads = async (e) => {
 
     await nameLanpad(landpads.name);
 
+    await LandpadsImage([landpads]);
+
 
 };
 
@@ -748,12 +768,13 @@ const getIDLaunches = async (e) => {
     console.log(Launches);
 
     await nameLaunches(Launches.name);
+    await Launchesimage([Launches]);
 
 };
 
 
 
-export const paginationLaunches = async(page=1, limit=4)=>{  
+export const paginationLaunches = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllLaunches(page, limit)
 
@@ -783,7 +804,7 @@ export const paginationLaunches = async(page=1, limit=4)=>{
     end.addEventListener("click", getIDLaunches)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
 }
@@ -821,7 +842,7 @@ const getAllIdLaunchpads = async (e) => {
     console.log(launchpad); 
 
     await nameLaunchpad(launchpad.name);
-
+    await LaunchpadsImage ([launchpad]);
 };
 
 
@@ -965,13 +986,13 @@ const getShipId = async (e) => {
     console.log(ships);
 
     await nameShip(ships.name);
-
+    await Shipsimage(ships);
 
 };
 
 
 
-export const paginationShips = async(page=1, limit=4)=>{  
+export const paginationShips = async(page=1, limit=3)=>{  
      
     let {docs, pagingCounter, totalPages, nextPage} = await getAllShips(page, limit)
 
@@ -1001,7 +1022,7 @@ export const paginationShips = async(page=1, limit=4)=>{
     end.addEventListener("click", getShipId)
     div.appendChild(end);
     console.log(div);
-    let [back, a1,a2,a3,a4, next] = div.children
+    let [back, a1,a2,a3, next] = div.children
     a1.click();
     return div;
 }
