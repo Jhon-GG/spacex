@@ -3,7 +3,7 @@ import {
     paginationCapsules,
     paginationRockets,
     paginationCrew,
-    // paginationLaunches,
+    paginationLaunches,
     paginationCores,
     paginationLandpads,
     // paginationShips,
@@ -54,13 +54,13 @@ crew.addEventListener("click", async(e)=>{
 })
 
 
-// let launches = document.querySelector("#launches")
-// launches.addEventListener("click", async(e)=>{
-//     await footerSelect(e, launches)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationLaunches())
-// })
+let launches = document.querySelector("#launches")
+launches.addEventListener("click", async(e)=>{
+    await footerSelect(e, launches)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationLaunches())
+})
 
 
 let cores = document.querySelector("#cores")
