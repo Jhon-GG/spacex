@@ -1490,3 +1490,272 @@ export const Historyevent_date_unix = async(event_date_unix)=>{
 
     return div; 
 }
+
+
+
+// -------------seccion informacion de Company---------------------
+
+export const DragonsId  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const Dragonsdetails  = async(description)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Description:"
+    let small = document.createElement('small');
+    small.textContent = description
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const Dragonstype  = async(type)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Type:"
+    let small = document.createElement('small');
+    small.textContent = type
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const Dragonsactive  = async(active)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Active:"
+    let small = document.createElement('small');
+    small.textContent = active
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const Dragonscrew_capacity  = async(crew_capacity)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Crew Capacity:"
+    let small = document.createElement('small');
+    small.textContent = crew_capacity
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const Dragonssidewall_angle_deg  = async(sidewall_angle_deg)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Sidewall Angle Deg:"
+    let small = document.createElement('small');
+    small.textContent = sidewall_angle_deg
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+
+export const Dragonsorbit_duration_yr  = async(orbit_duration_yr)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Sidewall Angle Deg:"
+    let small = document.createElement('small');
+    small.textContent = orbit_duration_yr
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const DragonWikipedia = async (wikipedia) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container2');
+
+    let divWrapper = document.createElement('div');
+    divWrapper.style.display = "flex"; // Utilizar flexbox
+    divWrapper.style.alignItems = "center"; // Alinear elementos verticalmente al centro
+    divWrapper.style.marginBottom = "20px"; 
+    divWrapper.style.marginLeft = "20px";
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+
+    let h3 = document.createElement('h3');
+    h3.textContent = "Wikipedia:";
+    h3.style.color = "white"; // Establecer el color del texto en blanco
+    h3.style.marginLeft = "20px";
+    divLast.appendChild(h3);
+
+    // Crear un elemento de texto para el enlace de Wikipedia
+    let readHereLink = document.createElement('span');
+    readHereLink.textContent = "Read Here";
+    readHereLink.style.color = "white"; // Establecer el color del texto en blanco
+    readHereLink.style.marginLeft = "20px";
+    readHereLink.style.cursor = "pointer"; // Cambiar el cursor al estilo de enlace
+    readHereLink.style.textDecoration = "underline"; // Subrayar el texto
+    readHereLink.style.fontSize = "9px";
+
+    // Agregar un evento de clic para redirigir al enlace de Wikipedia
+    readHereLink.addEventListener('click', () => {
+        window.open(wikipedia, '_blank'); // Abrir enlace en una nueva pestaña
+    });
+
+    // Agregar el enlace al contenedor
+    divLast.appendChild(readHereLink);
+
+    divWrapper.appendChild(divFirst);
+    divWrapper.appendChild(divLast);
+
+    div.appendChild(divWrapper);
+
+    return div;
+}
+
+
+export const Dragonsodry_mass_kg  = async(dry_mass_kg)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Dry Mass Kg:"
+    let small = document.createElement('small');
+    small.textContent = dry_mass_kg
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const Dragonsodry_mass_lb  = async(dry_mass_lb)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/dragonn.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Dry Mass Lb:"
+    let small = document.createElement('small');
+    small.textContent = dry_mass_lb
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}

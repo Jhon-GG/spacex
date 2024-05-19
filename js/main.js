@@ -143,5 +143,5 @@ ships.addEventListener("click", async(e)=>{
 })
 
 
-history.click();
+dragons.click();
 

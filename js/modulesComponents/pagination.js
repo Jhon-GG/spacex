@@ -82,7 +82,17 @@ import {
     Historyevent_date_utc,
     Historydetails,
     historyLinks,
-    Historyevent_date_unix
+    Historyevent_date_unix,
+    DragonsId,
+    Dragonsdetails,
+    Dragonstype,
+    Dragonsactive,
+    Dragonscrew_capacity,
+    Dragonssidewall_angle_deg,
+    Dragonsorbit_duration_yr,
+    DragonWikipedia,
+    Dragonsodry_mass_kg,
+    Dragonsodry_mass_lb
 } from "./information.js";
 
 
@@ -1031,6 +1041,47 @@ const getAllIdDragon = async (e) => {
 
     await nameDragon(dragons.name);
     await Dragonsimage(dragons.flickr_images);
+
+
+
+    let DragonsdetailsElement = await Dragonsdetails(dragons.description);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(DragonsdetailsElement);
+
+
+
+
+    let DragonsIdElement = await DragonsId (dragons.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(DragonsIdElement);
+
+
+    let DragonstypeElement = await Dragonstype (dragons.type); 
+    information__2.appendChild(DragonstypeElement);
+
+
+    let DragonsactiveElement = await Dragonsactive (dragons.active); 
+    information__2.appendChild(DragonsactiveElement);
+
+    let Dragonscrew_capacityElement = await Dragonscrew_capacity (dragons.crew_capacity); 
+    information__2.appendChild(Dragonscrew_capacityElement);
+
+    let Dragonssidewall_angle_degElement = await Dragonssidewall_angle_deg (dragons.sidewall_angle_deg); 
+    information__2.appendChild(Dragonssidewall_angle_degElement);
+
+    let Dragonsorbit_duration_yrElement = await Dragonsorbit_duration_yr (dragons.orbit_duration_yr); 
+    information__2.appendChild(Dragonsorbit_duration_yrElement);
+
+    let DragonWikipediaElement = await DragonWikipedia (dragons.wikipedia); 
+    information__2.appendChild(DragonWikipediaElement);
+
+    let Dragonsodry_mass_kgElement = await Dragonsodry_mass_kg (dragons.dry_mass_kg); 
+    information__2.appendChild(Dragonsodry_mass_kgElement);
+
+    let Dragonsodry_mass_lbElement = await Dragonsodry_mass_lb (dragons.dry_mass_lb); 
+    information__2.appendChild(Dragonsodry_mass_lbElement);
 
 
 
