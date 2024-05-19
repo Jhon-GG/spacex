@@ -2,7 +2,7 @@ import {
     load,
     paginationCapsules,
     paginationRockets,
-    // paginationCrew,
+    paginationCrew,
     // paginationLaunches,
     paginationCores,
     // paginationLandpads,
@@ -45,15 +45,13 @@ capsules.addEventListener("click", async(e)=>{
     paginacion.append(await paginationCapsules())
 })
 
-// //pagina a mostrar primero cuando se carga 
-
-// let Crew = document.querySelector("#Crew")
-// Crew.addEventListener("click", async(e)=>{
-//     await footerSelect(e, Crew)
-//     let paginacion = document.querySelector("#paginacion");
-//     paginacion.innerHTML = ""
-//     paginacion.append(await paginationCrew())
-// })
+let crew = document.querySelector("#crew")
+crew.addEventListener("click", async(e)=>{
+    await footerSelect(e, crew)
+    let paginacion = document.querySelector("#paginacion");
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationCrew())
+})
 
 
 // let launches = document.querySelector("#launches")
