@@ -119,7 +119,17 @@ import {
     payloadregime,
     payloadmean_anomaly,
     payloadepoch,
-    payloadperiapsis_km
+    payloadperiapsis_km,
+    LandpadsId,
+    LandpadsLaunches,
+    Landpadsfull_name,
+    Landpadstatus,
+    Landpadstype,
+    Landpadsdetails,
+    Landpadslocality,
+    Landpadsregion,
+    Landpadslatitude,
+    Landpadslongitude
 } from "./information.js";
 
 
@@ -1353,6 +1363,44 @@ const getAllIdLandpads = async (e) => {
     await nameLanpad(landpads.name);
 
     await LandpadsImage([landpads]);
+
+
+    let LandpadsLaunchesElement = await LandpadsLaunches(landpads.launches);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(LandpadsLaunchesElement);
+
+    let LandpadsdetailsElement = await Landpadsdetails(landpads.details);
+    descriptionItem.append(LandpadsdetailsElement);
+
+
+    let LandpadsIdElement = await LandpadsId (landpads.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(LandpadsIdElement);
+
+    let Landpadsfull_nameElement = await Landpadsfull_name (landpads.full_name);
+    information__2.appendChild(Landpadsfull_nameElement); 
+
+
+    let LandpadstatusElement = await Landpadstatus (landpads.status);
+    information__2.appendChild(LandpadstatusElement); 
+
+    let LandpadstypeElement = await Landpadstype (landpads.type);
+    information__2.appendChild(LandpadstypeElement); 
+
+    let LandpadslocalityElement = await Landpadslocality (landpads.locality);
+    information__2.appendChild(LandpadslocalityElement); 
+
+    let LandpadsregionElement = await Landpadsregion (landpads.region);
+    information__2.appendChild(LandpadsregionElement); 
+
+    let LandpadslatitudeElement = await Landpadslatitude (landpads.latitude);
+    information__2.appendChild(LandpadslatitudeElement); 
+
+
+    let LandpadslongitudeElement = await Landpadslongitude (landpads.longitude);
+    information__2.appendChild(LandpadslongitudeElement); 
 
 
     let sectionImage = document.querySelector("#section__information__1");

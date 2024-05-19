@@ -2465,3 +2465,259 @@ export const payloadperiapsis_km = async (periapsis_km) => {
 
     return div;
 };
+
+
+
+// -------------seccion informacion de Ships---------------------
+
+
+export const LandpadsId = async (id) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:";
+    let small = document.createElement('small');
+    small.textContent = id;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const LandpadsLaunches = async (launches) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Launches:";
+    divLast.appendChild(h3);
+
+    let small = document.createElement('small');
+    if (Array.isArray(launches) && launches.length > 0) {
+        // Si hay más de una lanzamiento, creamos una matriz de lanzamientos
+        let launchesArray = JSON.stringify(launches, null, 2);
+        // Eliminamos el primer y último carácter (los corchetes)
+        launchesArray = launchesArray.slice(1, -1);
+        small.textContent = launchesArray;
+    } else {
+        // Si solo hay una lanzamiento, creamos un solo elemento de texto
+        small.textContent = launches;
+    }
+    small.style.fontSize = "10px"; // Tamaño de fuente más pequeño
+    divLast.appendChild(small);
+
+    div.appendChild(divFirst);
+    div.appendChild(divLast);
+
+    return div;
+};
+
+
+export const Landpadsfull_name= async (full_name) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Full Name:";
+    let small = document.createElement('small');
+    small.textContent = full_name;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+
+export const Landpadstatus = async (status) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Status:";
+    let small = document.createElement('small');
+    small.textContent = status;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+export const Landpadstype = async (type) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Type:";
+    let small = document.createElement('small');
+    small.textContent = type;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+export const Landpadsdetails = async (details) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "details:";
+    let small = document.createElement('small');
+    small.textContent = details;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Landpadslocality= async (locality) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Locality:";
+    let small = document.createElement('small');
+    small.textContent = locality;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Landpadsregion = async (region) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Region:";
+    let small = document.createElement('small');
+    small.textContent = region;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Landpadslatitude = async (latitude) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Latitude:";
+    let small = document.createElement('small');
+    small.textContent = latitude;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
+
+
+export const Landpadslongitude = async (longitude) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container');
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/tierra.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Longitude:";
+    let small = document.createElement('small');
+    small.textContent = longitude;
+    small.style.fontSize = "12px"; // Tamaño de fuente más pequeño
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+};
