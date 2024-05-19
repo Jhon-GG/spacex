@@ -79,3 +79,6 @@ export const informRocketEngineThrustVacuum = async(thrust_vacuum)=>{
     //     </div>
     // </div>
 }
+
+
+

@@ -2,6 +2,10 @@ import {
     getAllRockets, 
     getAllRocketsId
 } from "../modules/rockets.js";
+
+
+// importar los titulos de la pagina
+
 import { 
     nameRockets,
     nameCapsul,
@@ -17,16 +21,42 @@ import {
     namePayload,
     nameRoadsters
 } from "./title.js";
+
+
+// importar los datos del Api en la pagina
+
 import { 
     informationRockets,
     informationLaunchCostRocket,
     informationFirstFlightRocket,
-    informationWebRocket
+    informationWebRocket,
+    companyId,
+    founder,
+    summary,
+    founded,
+    employees,
+    vehicles,
+    launch_sites,
+    test_sites,
+    cto_propulsion,
+    valuation,
+    coo,
+    companytwitter
 } from "./information.js";
+
+
+
+
+
+// importar las tablas de la pagina
+
 import { 
     tableRocketColum1, 
     tableRocketColum2
 } from "./tables.js";
+
+
+
 import { 
     informRocketEngineThrustSeaLevel, 
     informRocketEngineThrustVacuum
@@ -361,6 +391,88 @@ export const paginationCompany = async() => {
     await clear()
 
     await nameCompany(data.name);
+
+
+    let summaryElement = await summary(data.summary);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(summaryElement);
+
+    let foundedElement = await founded(data.founded);
+    descriptionItem.append(foundedElement);
+    
+    let employeesElement = await employees(data.employees);
+    descriptionItem.append(employeesElement);
+
+
+    let companytwitterElement = await companytwitter(data.links.twitter);
+    descriptionItem.append(companytwitterElement);
+
+
+    let companyIdElement = await companyId(data.id); // Espera a que la función asíncrona se resuelva
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(companyIdElement);
+
+    let founderElement = await founder(data.founder);
+    information__2.appendChild(founderElement);
+
+
+    let vehiclesElement = await vehicles(data.vehicles);
+    information__2.appendChild(vehiclesElement);
+
+    let launch_sitesElement = await launch_sites(data.launch_sites);
+    information__2.appendChild(launch_sitesElement);
+
+    let test_sitesElement = await test_sites(data.test_sites);
+    information__2.appendChild(test_sitesElement);
+
+    let cto_propulsionElement = await cto_propulsion(data.cto_propulsion);
+    information__2.appendChild(cto_propulsionElement);
+
+    let valuationElement = await valuation(data.valuation);
+    information__2.appendChild(valuationElement);
+
+
+    let cooElement = await coo(data.coo);
+    information__2.appendChild(cooElement);
+
+
+
+
+
+    let sectionImage = document.querySelector("#section__information__1");
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "storage/img/icons/spacex.jpg");
+    img1.classList.add("imagen-paginacion-capsula");
+    img1.style.position = "absolute";
+    img1.style.top = "100px";
+    img1.style.left = "50px";
+    img1.style.width = "500px";
+    img1.style.height = "250px";
+    img1.style.marginTop = "220px";
+    img1.style.marginLeft = "28px";
+    img1.style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.5)";
+    img1.style.borderRadius = "10%"
+    sectionImage.appendChild(img1);
+    
+    // Crea y configura la segunda imagen
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "storage/img/icons/elon.jpg"); // Cambia la ruta de la imagen
+    img2.classList.add("imagen-paginacion-capsula");
+    img2.style.position = "absolute";
+    img2.style.top = "300px"; // Ajusta la posición vertical de la segunda imagen
+    img2.style.left = "150px"; // Ajusta la posición horizontal de la segunda imagen
+    img2.style.width = "200px"; // Ajusta el ancho de la segunda imagen
+    img2.style.height = "250px";
+    img2.style.marginTop = "20px";
+    img2.style.marginLeft = "530px";
+    img2.style.borderRadius = "10%"
+    sectionImage.appendChild(img2);
+
+
+    
+
 
 }
 
