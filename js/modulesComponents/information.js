@@ -1344,3 +1344,149 @@ export const crewstatus = async(status)=>{
 
     return div; 
 }
+
+
+// -------------seccion informacion de History ---------------------
+
+export const HistoryId  = async(id)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/history.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "ID:"
+    let small = document.createElement('small');
+    small.textContent = id
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+export const Historyevent_date_utc = async(event_date_utc)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/history.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Event Date Utc:"
+    let small = document.createElement('small');
+    small.textContent = event_date_utc
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const Historydetails = async(details)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/history.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Details:"
+    let small = document.createElement('small');
+    small.textContent = details
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}
+
+
+export const historyLinks = async (links) => {
+    let div = document.createElement('div');
+    div.classList.add('description__container2');
+
+    let divWrapper = document.createElement('div');
+    divWrapper.style.display = "flex"; 
+    divWrapper.style.alignItems = "center"; 
+    divWrapper.style.marginBottom = "20px"; 
+    divWrapper.style.marginLeft = "20px";
+
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/history.png");
+    img.setAttribute("width", "50"); 
+    img.setAttribute("height", "40");
+    divFirst.appendChild(img);
+
+    let divLast = document.createElement('div');
+
+    let h3 = document.createElement('h3');
+    h3.textContent = "Article:";
+    h3.style.color = "white"; 
+    h3.style.marginLeft = "20px";
+    divLast.appendChild(h3);
+
+    // Extraer el enlace del objeto "links"
+    let articleLink = links.article;
+
+    // Crear un enlace (<a>) para el artículo
+    let articleAnchor = document.createElement('a');
+    articleAnchor.textContent = "Read here";
+    articleAnchor.style.color = "white"; 
+    articleAnchor.style.marginLeft = "20px";
+    articleAnchor.style.textDecoration = "underline"; 
+    articleAnchor.href = articleLink; 
+    articleAnchor.style.fontSize = "9px";
+    articleAnchor.target = "_blank";
+
+    divLast.appendChild(articleAnchor);
+
+    divWrapper.appendChild(divFirst);
+    divWrapper.appendChild(divLast);
+
+    div.appendChild(divWrapper);
+
+    return div;
+}
+
+
+export const Historyevent_date_unix = async(event_date_unix)=>{
+    let div = document.createElement('div');
+    div.classList.add('description__container')
+    let divFirst = document.createElement('div');
+    let img = document.createElement('img');
+    img.setAttribute("src", "storage/img/icons/history.png")
+
+    img.setAttribute("width", "50"); 
+     img.setAttribute("height", "40");
+
+    divFirst.append(img);
+    
+    let divLast = document.createElement('div');
+    let h3 = document.createElement('h3');
+    h3.textContent = "Event Date Unix:"
+    let small = document.createElement('small');
+    small.textContent = event_date_unix
+    divLast.append(h3, small);
+    div.append(divFirst, divLast);
+
+    return div; 
+}

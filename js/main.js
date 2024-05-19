@@ -143,5 +143,5 @@ ships.addEventListener("click", async(e)=>{
 })
 
 
-crew.click();
+history.click();
 
