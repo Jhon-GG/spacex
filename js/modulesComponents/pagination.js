@@ -106,7 +106,20 @@ import {
     shipabs,
     shipmass_kg,
     shipyear_built,
-    shipstatus
+    shipstatus,
+    payloadId,
+    payloadlaunch,
+    payloadtype,
+    payloadreused,
+    payloadcustomers,
+    payloadnationalities,
+    payloadmanufacturers,
+    payloadorbit,
+    payloadreference_system,
+    payloadregime,
+    payloadmean_anomaly,
+    payloadepoch,
+    payloadperiapsis_km
 } from "./information.js";
 
 
@@ -1675,6 +1688,52 @@ const getPayloadsId = async (e) => {
     let namePayElement = await namePayload(payloads.name);
 
 
+    let payloadlaunchElement = await payloadlaunch(payloads.launch);
+    let descriptionItem = document.querySelector(".description__item");
+    descriptionItem.innerHTML = "";
+    descriptionItem.append(payloadlaunchElement);
+
+    let payloadcustomersElement = await payloadcustomers(payloads.customers);
+    descriptionItem.append(payloadcustomersElement);
+
+    let payloadnationalitiesElement = await payloadnationalities(payloads.nationalities);
+    descriptionItem.append(payloadnationalitiesElement);
+
+    let payloadmanufacturersElement = await payloadmanufacturers(payloads.manufacturers);
+    descriptionItem.append(payloadmanufacturersElement);
+
+
+    let payloadIdElement = await payloadId (payloads.id); 
+    let information__2 = document.getElementById('information__2');
+    information__2.innerHTML = "";
+    information__2.appendChild(payloadIdElement);
+
+    let payloadtypeElement = await payloadtype (payloads.type); 
+    information__2.appendChild(payloadtypeElement);
+
+    let payloadreusedeElement = await payloadreused (payloads.reused); 
+    information__2.appendChild(payloadreusedeElement);
+
+    let payloadorbitElement = await payloadorbit (payloads.orbit); 
+    information__2.appendChild(payloadorbitElement);
+
+    let payloadreference_systemElement = await payloadreference_system (payloads.reference_system); 
+    information__2.appendChild(payloadreference_systemElement);
+
+    let payloadregimeElement = await payloadregime (payloads.regime); 
+    information__2.appendChild(payloadregimeElement);
+
+
+    let payloadmean_anomalyElement = await payloadmean_anomaly (payloads.mean_anomaly); 
+    information__2.appendChild(payloadmean_anomalyElement);
+
+    let payloadepochElement = await payloadepoch (payloads.epoch); 
+    information__2.appendChild(payloadepochElement);
+
+
+    let payloadperiapsis_kmElement = await payloadperiapsis_km (payloads.periapsis_km); 
+    information__2.appendChild(payloadperiapsis_kmElement);
+    
 
     let sectionImage = document.querySelector("#section__information__1");
 
